@@ -35,7 +35,7 @@ app.post("/getNonce", async (req, res) => {
     res.status(201).json({ message: "API key saved successfully" });
   } catch (error) {
     console.error("Error saving api_key:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: error });
   }
 });
 
