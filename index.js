@@ -39,6 +39,11 @@ app.post("/getNonce", async (req, res) => {
   }
 });
 
+// Health check route for cron job
+app.get("/ping", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
